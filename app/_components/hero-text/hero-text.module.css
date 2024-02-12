@@ -1,0 +1,61 @@
+/* .section {
+    display: flex;
+    gap: 3rem;
+} */
+
+.container {
+  display: flex;
+  font-size: 8.5vw;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  /* height: 100%; */
+  position: relative;
+}
+
+.typeFamily {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-color);
+  gap: 0;
+  font-weight: 300;
+  margin-left: 0.9em;
+  overflow: hidden;
+  z-index: 1
+}
+
+.typeAnim {
+  color: var(--strong-color);
+  font-weight: 600;
+  overflow: hidden;
+  height: auto;
+}
+
+.textAppear {
+  overflow: hidden;
+}
+
+.textAppearWrapper {
+  padding: 0;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height:auto;
+  will-change: transform3D;
+  display: block;
+}
+
+.imageAnim {
+  height: auto;
+}
+
+
+@media (max-width:768px) {
+  .container {
+    font-size: 9vw;
+    height:30vh;
+  }
+}

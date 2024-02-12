@@ -1,95 +1,99 @@
+"use client"
+
 import Image from "next/image";
 import styles from "./page.module.css";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ElementRef, useEffect, useRef, useState } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { TextPlugin } from 'gsap/TextPlugin'
+import coworking from '@/public/images/coworking.jpg';
+import Hero from "./_components/hero-section/hero";
+import HeroText from "./_components/hero-text/hero-text";
+import IntroSection from "./_components/intro-section/intro-section";
+import ServiceSection from "./_components/services-section/service-section";
+import FormulesSection from "./_components/formules-section/formules-section";
+import PartnersSection from "./_components/partners-section/partners-section";
+import FooterSection from "./_components/footer-section/footer-section";
 
 export default function Home() {
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(TextPlugin)
+
+  const [phraseExplainer, setPhraseExplainer] = useState("chaleureux");
+
+   
+  const textAppearWrapperStyle = `.${styles.textAppearWrapper}`;
+  const imageAnimStyle = `.${styles.imageAnim}`;
+  const imageStyle = `.${styles.image}`;
+  const highlightStyle = `.${styles.highlight}`;
+  const container2Style = `.${styles.container2}`;
+  const servicesDescriptionStyle = `.${styles.servicesDescription}`;
+  // const heroTextStyle = `.${styles.heroText}`;
+  const highlight__activeStyle = `.${styles.highlight__active}`;
+
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+
+      }
+    )()
+  }, [])
+
+
+
+
+
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main   className={`${styles.main}`}> 
+      {/* <div className={styles.noise}/> */}
+      <Hero />
+      <HeroText />
+      <IntroSection />
+      <ServiceSection 
+        title="S'installer"
+        text="Seul ou en équipe, profitez de services  sur-mesure et de bureaux personnalisés à votre image."
+        src={coworking}
+        alt="people sitting around a table in collab"
+      />
+      <ServiceSection 
+        title="S'installer"
+        text="Seul ou en équipe, profitez de services  sur-mesure et de bureaux personnalisés à votre image."
+        src={coworking}
+        alt="people sitting around a table in collab"
+      />
+      <ServiceSection 
+        title="S'installer"
+        text="Seul ou en équipe, profitez de services  sur-mesure et de bureaux personnalisés à votre image."
+        src={coworking}
+        alt="people sitting around a table in collab"
+      />
+      <ServiceSection 
+        title="S'installer"
+        text="Seul ou en équipe, profitez de services  sur-mesure et de bureaux personnalisés à votre image."
+        src={coworking}
+        alt="people sitting around a table in collab"
+      />
+      <ServiceSection 
+        title="S'installer"
+        text="Seul ou en équipe, profitez de services  sur-mesure et de bureaux personnalisés à votre image."
+        src={coworking}
+        alt="people sitting around a table in collab"
+      />
+      <FormulesSection />
+      <PartnersSection />
+      <FooterSection />
+      {/* <div className={styles.hero}>
+        <div className={styles.container}>
+          Container goes here
         </div>
-      </div>
+      </div> */}
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
   );
-}
+
+  }
