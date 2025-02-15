@@ -25,9 +25,7 @@ body[data-theme=yellow] {
 
 body {
   background-color: var(--background-color);
-  overflow: hidden;
   color: var(--text-color);
   transition: all 1.5s ease;
   margin: 0;
-
 }
