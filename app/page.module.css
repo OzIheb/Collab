@@ -34,10 +34,10 @@
   justify-content: start;
   width: 100%;
   position: relative;
-  padding-top: 8rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
-  margin-bottom: 10rem;
+  padding-top: 4rem;
+  padding-left: clamp(1rem, 5vw, 8rem);
+  padding-right: clamp(1rem, 5vw, 8rem);
+  margin-bottom: 5rem;
 }
 
 .servicesSection {

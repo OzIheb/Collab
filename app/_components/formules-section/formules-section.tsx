@@ -22,7 +22,7 @@ const FormulesSection = () => {
 
     const [phraseExplainer, setPhraseExplainer] = useState("clés en main");
 
-    const phrasesFormule = ["clés en main", "sans engagement", "à la carte", "sur-mesure"]
+    const phrasesFormule = ["flexible", "affordable", "collaborative", "accessible"]
     let currentIndex = 0;
 
     const { contextSafe } = useGSAP();
@@ -221,7 +221,7 @@ const FormulesSection = () => {
         <section className={styles.formulesContainer} ref={formuleContainerRef}>
             <div className={styles.container} ref={darkModeRef}>
                 <div className={styles.typeExplainer}>
-                    <div>Nos formules sont</div>
+                    <div>Our spaces are</div>
                     <div className={styles.typeAnim}><div ref={explainerTextRef}>{phraseExplainer}</div></div>
                 </div>
             </div>
@@ -229,60 +229,60 @@ const FormulesSection = () => {
                 <article ref={innerRef} onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
                     <h3 className={`${styles.h2} ${styles.m_0} ${styles.textAppear}`} ref={formuleFirstRef}>
                         <div className={styles.textAppear}>
-                            <div className={styles.textAppearWrapper}>Lieu</div>
+                            <div className={styles.textAppearWrapper}>Coworking</div>
                         </div>
                         <div className={styles.textAppear}>
-                            <div className={styles.textAppearWrapper}>privilégié</div>
+                            <div className={styles.textAppearWrapper}>Space</div>
                         </div>
                     </h3>
                     <div className={styles.inner} >
                         <ul className={styles.list}>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
+                            <li>Flexible daily access</li>
+                            <li>High-speed WiFi</li>
+                            <li>Quiet study areas</li>
+                            <li>Coffee & refreshments</li>
+                            <li>Starting at 30dt a month</li>
+                            <li>Monthly packages available</li>
                         </ul>
                     </div>
                 </article>
                 <article onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
                     <h3 className={`${styles.h2} ${styles.m_0}`} ref={formuleSecondRef}>
                         <div className={styles.textAppear}>
-                            <div className={styles.textAppearWrapper}>Lieu</div>
+                            <div className={styles.textAppearWrapper}>Room</div>
                         </div>
                         <div className={styles.textAppear}>
-                            <div className={styles.textAppearWrapper}>privilégié</div>
+                            <div className={styles.textAppearWrapper}>Rental</div>
                         </div>
                     </h3>
                     <div className={styles.inner}>
                         <ul className={styles.list}>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
+                            <li>Conference Room (up to 30 people)</li>
+                            <li>Training Room (up to 20 people)</li>
+                            <li>Podcast Studio (up to 4 people)</li>
+                            <li>Full A/V equipment included</li>
+                            <li>Hourly or daily rates</li>
+                            <li>Special rates for student clubs</li>
                         </ul>
                     </div>
                 </article>
                 <article onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
                     <h3 className={`${styles.h2} ${styles.m_0}`} ref={formuleThirdRef}>
                         <div className={styles.textAppear}>
-                            <div className={styles.textAppearWrapper}>Lieu</div>
+                            <div className={styles.textAppearWrapper}>Event</div>
                         </div>
                         <div className={styles.textAppear}>
-                            <div className={styles.textAppearWrapper}>privilégié</div>
+                            <div className={styles.textAppearWrapper}>Spaces</div>
                         </div>
                     </h3>
                     <div className={styles.inner}>
                         <ul className={styles.list}>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
-                            <li>450m² à partager</li>
+                            <li>Main Courtyard for events</li>
+                            <li>Club meetings & workshops</li>
+                            <li>Exhibition space available</li>
+                            <li>Catering options</li>
+                            <li>Technical support</li>
+                            <li>Custom packages for organizations</li>
                         </ul>
                     </div>
                 </article>

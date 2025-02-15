@@ -7,7 +7,7 @@ import { useRef, ElementRef, useState } from 'react';
 
 const IntroSection = () => {
 
-    const [phraseExplainer, setPhraseExplainer] = useState("chaleureux");
+    const [phraseExplainer, setPhraseExplainer] = useState("youth-led community");
 
     const containerIntroRef = useRef<ElementRef<"div">>(null);
     const explainerTextRef = useRef<ElementRef<"div">>(null);
@@ -15,7 +15,7 @@ const IntroSection = () => {
 
     const highlightStyle = `.${styles.highlight}`;
 
-    const phrasesExplainer = ["chaleureux", "flexible", "simple"]
+    const phrasesExplainer = ["youth-led community", "inclusive space", "creative hub"]
 
     let currentIndex = 0;
 
@@ -128,12 +128,18 @@ const IntroSection = () => {
         <section>
             <div className={styles.container} ref={containerIntroRef}>
                 <div className={styles.introText}>
-                    <div className={styles.kolTitle}>En plein coeur de Sfax, Collab est un lieu intimiste dédié a <strong className={styles.highlight}>la creation collaboratif</strong> et au developpement de nouveaux projets <strong className={`${styles.highlight} ${styles.highlight__text}`}>audiovisuels et creatifs.</strong></div>
+                    <div className={styles.kolTitle}>
+                        <span>ELCollab is more than just a workspace—its a</span>
+                        <strong className={styles.highlight}>youth-led community hub</strong>
+                        <span>where ideas thrive and</span>
+                        <strong className={`${styles.highlight} ${styles.highlight__text}`}>creativity flourishes</strong>
+                        <span>in an inclusive and safe space.</span>
+                    </div>
                 </div>
             </div>
             <div className={styles.container2} ref={yellowModeRef}>
                 <div className={styles.typeExplainer}>
-                    <div>Un espace de travail</div>
+                    <div>We are a</div>
                     <div className={styles.typeAnim}><div ref={explainerTextRef}>{phraseExplainer}</div></div>
                 </div>
             </div>
