@@ -73,7 +73,7 @@ export default function Home() {
       />
       <FormulesSection />
       <LocationSection />
-      <PartnersSection />
+      {/* <PartnersSection /> */}
       <FooterSection />
       <CalButton />
     </main>

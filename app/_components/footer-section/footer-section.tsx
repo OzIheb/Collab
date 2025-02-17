@@ -62,7 +62,7 @@ const FooterSection = () => {
         <section className={styles.container} ref={containerRef}>
             <div className={styles.textAppearWrapper}>
                 <div className={styles.title} ref={footerTitleRef}>
-                    Envie d&apos;en savoir plus ?
+                    Get to know us!
                 </div>
             </div>
             <button ref={buttonRef} className={styles.ouiButton}>

@@ -85,6 +85,15 @@
         justify-content: center;
         width: 100%;
     }
+
+    .location__info_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
 }
 
 @media (max-width: 575.98px) {
